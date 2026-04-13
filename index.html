@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ملف ترشيح طرابلس - عاصمة السياحة الإسلامية 2028</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Tahoma', 'Helvetica Neue', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+            background: #fefaf2;
+            color: #2c2a29;
+            line-height: 1.7;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* header hero */
+        .hero {
+            background: linear-gradient(135deg, #0a4b2f 0%, #1b6e48 100%);
+            color: white;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 6px solid #f2b83e;
+        }
+        .hero::before {
+            content: "☪";
+            font-size: 220px;
+            opacity: 0.08;
+            position: absolute;
+            left: -30px;
+            bottom: -50px;
+            pointer-events: none;
+        }
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-content h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #ffeaac;
+            margin-bottom: 0.75rem;
+        }
+        .hero-content h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .hero-content .sub {
+            font-size: 1.2rem;
+            border-top: 2px solid #f2b83e;
+            display: inline-block;
+            padding-top: 0.6rem;
+            margin-top: 0.6rem;
+        }
+
+        /* navigation sticky */
+        .nav-sticky {
+            background: white;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #eee2d4;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.8rem 0;
+        }
+        .nav-links a {
+            background: #f6efe7;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            color: #1f5e43;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        .nav-links a:hover {
+            background: #f2b83e;
+            color: #1e3a2f;
+            transform: translateY(-2px);
+        }
+
+        /* sections */
+        .section {
+            background: white;
+            border-radius: 40px;
+            margin: 2.5rem 0;
+            padding: 2.2rem 2.5rem;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+            border: 1px solid #f3e9de;
+        }
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 800;
+            border-right: 8px solid #f2b83e;
+            padding-right: 1rem;
+            margin-bottom: 1.5rem;
+            color: #0a4b2f;
+        }
+        .subsection-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 1.8rem 0 1rem 0;
+            color: #2a7a55;
+            border-bottom: 2px solid #f0e2d2;
+            padding-bottom: 0.4rem;
+        }
+
+        /* grids & cards */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+        .card {
+            background: #fefcf8;
+            border-radius: 28px;
+            padding: 1.6rem;
+            border: 1px solid #eee2d4;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.08);
+            border-color: #f2b83e;
+        }
+        .badge {
+            background: #0a4b2f;
+            color: white;
+            border-radius: 50px;
+            padding: 0.2rem 1rem;
+            display: inline-block;
+            font-size: 0.75rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* معرض الصور الضخم */
+        .gallery-master {
+            margin: 2rem 0;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery-item {
+            background: #fff9f0;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: 0.25s;
+            cursor: pointer;
+            border: 1px solid #efe2d2;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px -10px rgba(0,0,0,0.2);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-item .caption {
+            padding: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+            background: white;
+            color: #1f5e43;
+        }
+
+        /* جداول الفعاليات */
+        .event-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fffcf7;
+            border-radius: 24px;
+            overflow: hidden;
+            margin: 1.2rem 0;
+        }
+        .event-table th, .event-table td {
+            border: 1px solid #e7dacb;
+            padding: 12px 16px;
+            text-align: right;
+            vertical-align: top;
+        }
+        .event-table th {
+            background: #1b6e48;
+            color: white;
+            font-weight: 700;
+        }
+        .event-table tr:nth-child(even) {
+            background: #f9f2e8;
+        }
+
+        /* إحصائيات */
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1.2rem;
+            margin: 1.5rem 0;
+        }
+        .stat-block {
+            background: linear-gradient(145deg, #ffffff, #faf3e9);
+            border-radius: 56px;
+            padding: 1rem 1.8rem;
+            min-width: 130px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+        }
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #e79c2a;
+        }
+
+        /* قوائم */
+        ul, .list-custom {
+            padding-right: 1.5rem;
+            margin: 0.8rem 0;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+
+        /* signature */
+        .signature {
+            background: #fef3e4;
+            border-radius: 36px;
+            padding: 1.8rem;
+            text-align: center;
+            margin-top: 2rem;
+            border-right: 6px solid #f2b83e;
+        }
+
+        footer {
+            background: #0a4b2f;
+            color: #e9e2d4;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+            border-radius: 48px 48px 0 0;
+        }
+        @media (max-width: 800px) {
+            .section {
+                padding: 1.5rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .hero-content h1 {
+                font-size: 1.9rem;
+            }
+        }
+        hr {
+            margin: 1rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to left, #e0cfbc, transparent);
+        }
+        .btn-gh {
+            background: #f2b83e;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            display: inline-block;
+            color: #0a2b1d;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="hero">
+    <div class="container hero-content">
+        <h3>دولة ليبيا – حكومة الوحدة الوطنية</h3>
+        <h1>وزارة السياحة والصناعات التقليدية</h1>
+        <div class="sub">ملف ترشيح مدينة طرابلس<br>عاصمة السياحة الإسلامية 2028</div>
+    </div>
+</div>
+
+<div class="nav-sticky">
+    <div class="container nav-links">
+        <a href="#summary">الملخص</a>
+        <a href="#history">التاريخ والحضارة</a>
+        <a href="#architecture">الطرز المعمارية</a>
+        <a href="#spiritual">التراث الروحي</a>
+        <a href="#events">الفعاليات</a>
+        <a href="#stats">إحصاءات</a>
+        <a href="#gallery">المعرض</a>
+    </div>
+</div>
+
+<div class="container">
+    <!-- معرض الصور الشامل بناءً على قائمة الصور المرفقة -->
+    <div class="section" id="gallery">
+        <h2 class="section-title">🖼️ معرض طرابلس: التراث الحي</h2>
+        <div class="gallery-grid">
+            <!-- الأسماء المستخلصة من image.png مع الإضافة اليدوية لأهم المعالم -->
+            <div class="gallery-item"><img src="cornia.png" alt="فندق كورنثيا" onerror="this.src='https://placehold.co/400x300?text=Corinthia+Hotel'"><div class="caption">فندق كورنثيا - طرابلس</div></div>
+            <div class="gallery-item"><img src="event1.png" alt="فعاليات تراثية" onerror="this.src='https://placehold.co/400x300?text=Event+Heritage'"><div class="caption">المهرجانات والفعاليات</div></div>
+            <div class="gallery-item"><img src="folklore.png" alt="الفلكلور الليبي" onerror="this.src='https://placehold.co/400x300?text=Folklore+Libya'"><div class="caption">التراث الشعبي والأهازيج</div></div>
+            <div class="gallery-item"><img src="handcraft1.png" alt="حرف يدوية" onerror="this.src='https://placehold.co/400x300?text=Handicraft'"><div class="caption">الصناعات التقليدية</div></div>
+            <div class="gallery-item"><img src="handcraft2.png" alt="نقش على الخشب" onerror="this.src='https://placehold.co/400x300?text=Woodcarving'"><div class="caption">النقش الإسلامي</div></div>
+            <div class="gallery-item"><img src="handcraft3.png" alt="سجاد ليبي" onerror="this.src='https://placehold.co/400x300?text=Carpet'"><div class="caption">السجاد الليبي</div></div>
+            <div class="gallery-item"><img src="handcraft4.png" alt="مشغولات نحاسية" onerror="this.src='https://placehold.co/400x300?text=Brass+work'"><div class="caption">المشغولات النحاسية</div></div>
+            <div class="gallery-item"><img src="hotels5.png" alt="فنادق" onerror="this.src='https://placehold.co/400x300?text=Hotels'"><div class="caption">الضيافة الفندقية</div></div>
+            <div class="gallery-item"><img src="hotelsgrand.png" alt="حمام عثمان" onerror="this.src='https://placehold.co/400x300?text=Hammam+Othman'"><div class="caption">حمام عثمان التاريخي</div></div>
+            <div class="gallery-item"><img src="mosque1.png" alt="جامع مراد آغا" onerror="this.src='https://placehold.co/400x300?text=Murad+Agha'"><div class="caption">جامع مراد آغا - تاجوراء</div></div>
+            <div class="gallery-item"><img src="mosque2.png" alt="جامع الناقة" onerror="this.src='https://placehold.co/400x300?text=Al-Naqah'"><div class="caption">جامع الناقة (أقدم مسجد)</div></div>
+            <div class="gallery-item"><img src="mosque3.png" alt="مساجد تاريخية" onerror="this.src='https://placehold.co/400x300?text=Historic+Mosque'"><div class="caption">روائع العمارة العثمانية</div></div>
+            <div class="gallery-item"><img src="Old City Gates.png" alt="أبواب المدينة القديمة" onerror="this.src='https://placehold.co/400x300?text=Old+City+Gates'"><div class="caption">أبواب طرابلس القديمة</div></div>
+            <div class="gallery-item"><img src="Marina.png" alt="مارينا طرابلس" onerror="this.src='https://placehold.co/400x300?text=Marina'"><div class="caption">الواجهة البحرية</div></div>
+            <div class="gallery-item"><img src="Islamic Call Mosque.png" alt="مسجد المنارة" onerror="this.src='https://placehold.co/400x300?text=Islamic+Call'"><div class="caption">المآذن والزخارف</div></div>
+        </div>
+        <p style="margin-top:1rem; text-align:center">* الصور تعكس جمال العمارة، الحرف، والفعاليات الروحية في طرابلس (تُعرض بأسماء الملفات الأصلية).</p>
+    </div>
+
+    <!-- الرسالة الرسمية (مأخوذة من الملف الثاني) -->
+    <div class="section">
+        <h2 class="section-title">📜 الرسالة الرسمية</h2>
+        <p><strong>إلى منظمة التعاون الإسلامي – عبر الإطار المؤسسي للسياحة الإسلامية</strong></p>
+        <p>تتشرف دولة ليبيا بترشيح مدينة <strong>طرابلس</strong> لنيل لقب <strong>عاصمة السياحة الإسلامية 2028</strong>، لما تمثله من مركز حضاري جامع بين الهوية المتوسطية الساحلية والعمق الصحراوي الإفريقي، وبين الطرز المعمارية العثمانية والأندلسية والصحراوية، في منظومة تراثية وروحية حيّة تعكس نموذج المدينة الإسلامية المعتدلة والمتنوعة.</p>
+        <p>طرابلس اليوم مدينة حيّة في ممارساتها اليومية؛ من الزوايا والكتاتيب، إلى الاحتفالات الدينية والفنون الروحية والشعبية.</p>
+    </div>
+
+    <!-- الملخص التنفيذي + الرؤية -->
+    <div class="grid-2" id="summary">
+        <div class="card">
+            <span class="badge">ملخص تنفيذي</span>
+            <h3>🏙️ طرابلس نموذج فريد</h3>
+            <p>طرابلس تجمع بين البحر والصحراء، بين العمارة والفنون، بين التاريخ والحياة اليومية. الطراز العثماني، الأندلسي-المغاربي، والصحراوي يمتزج مع التراث غير المادي: الموشحات، المألوف، الحضرة الصوفية، وتدريجة العريس.</p>
+        </div>
+        <div class="card">
+            <span class="badge">رؤية 2028</span>
+            <h3>🌟 طرابلس عاصمة السياحة الإسلامية</h3>
+            <p>مدينة تبرز هوية ليبيا الإسلامية المعتدلة، وتجذب السياحة الثقافية والروحية والفنية، وتكون مركزًا للمعرفة والتبادل الثقافي في العالم الإسلامي، نموذج عالمي يجمع العمق الروحي والتنوع المعماري والاستدامة.</p>
+        </div>
+    </div>
+
+    <!-- الخلفية التاريخية والعلماء -->
+    <div class="section" id="history">
+        <h2 class="section-title">🏛️ الخلفية التاريخية والحضارية</h2>
+        <p><strong>الموقع الجغرافي:</strong> طرابلس بوابة المتوسط وعمق إفريقيا، ملتقى الحضارات منذ الفتح الإسلامي عام 643م.</p>
+        <p><strong>الامتداد الإسلامي:</strong> شهدت الدولة الفاطمية، الأغالبة، الموحدون، الحفصيون، والأسرة القرمانلية، وصولاً إلى العهد العثماني الذي ترك بصمته العظيمة.</p>
+        <div class="grid-2">
+            <div>
+                <h3>أبرز العلماء والتراجم</h3>
+                <ul>
+                    <li>عبد السلام الأسمر (الولي الصالح)</li>
+                    <li>أحمد زروق (الفقه المالكي)</li>
+                    <li>المهدي بن عيسى وآخرون</li>
+                </ul>
+                <h3>الحياة العلمية والزوايا</h3>
+                <p>زاوية المرغني، زاوية أعمورة، زاوية المكني – مراكز لنشر المذهب المالكي والتصوف الشاذلي.</p>
+            </div>
+            <div>
+                <h3>الأثر الفكري والاجتماعي</h3>
+                <p>ساهمت الزوايا والكتاتيب في تعليم القرآن، العلوم الشرعية، وتقديم الخدمات الاجتماعية، وما زالت حاضرة بقوة في النسيج المجتمعي.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- الطرز المعمارية الثلاثة -->
+    <div class="section" id="architecture">
+        <h2 class="section-title">🏛️ الطرز المعمارية الإسلامية الثلاثة</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>🕌 الطراز العثماني</h3>
+                <p>قباب مركزية، مآذن أسطوانية، زخارف جصية وخطية. أبرز النماذج: <strong>جامع مراد آغا (تاجوراء)، جامع أحمد باشا القرمانلي، جامع قرجي</strong>.</p>
+            </div>
+            <div class="card">
+                <h3>🌿 الطراز الأندلسي-المغاربي</h3>
+                <p>أقواس حدوية، أفنية داخلية، مشربيات، وبيوت تقليدية داخل المدينة القديمة والزوايا.</p>
+            </div>
+            <div class="card">
+                <h3>🏜️ الطراز الصحراوي</h3>
+                <p>جدران سميكة، فتحات صغيرة، بناء حجري متكيف مع المناخ. نموذج بارز: <strong>مسجد ساقاطة بجنزور</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- المؤسسات الدينية والتراث غير المادي -->
+    <div class="section" id="spiritual">
+        <h2 class="section-title">📿 المؤسسات الدينية والتراث غير المادي</h2>
+        <div class="grid-2">
+            <div>
+                <h3>المساجد التاريخية</h3>
+                <p>جامع الناقة (أقدم مسجد)، جامع مراد آغا، جامع المحمودي، جامع قرجي، وجامع القره مانلي.</p>
+                <h3>الزوايا والكتاتيب</h3>
+                <p>زاوية المرغني، زاوية أعمورة، زاوية المكني، وكتاتيب تحفيظ القرآن مثل كتاب الشيخ الطاهر، وتستخدم الألواح التقليدية.</p>
+                <h3>مدرسة الفنون والصنائع الإسلامية</h3>
+                <p>مركز للحفاظ على الحرف والزخرفة الإسلامية.</p>
+            </div>
+            <div>
+                <h3>التراث غير المادي الحي</h3>
+                <ul>
+                    <li><strong>فن المألوف:</strong> موسيقى أندلسية في المناسبات الدينية.</li>
+                    <li><strong>الموشحات:</strong> أناشيد روحية في مدح الرسول ﷺ.</li>
+                    <li><strong>الحضرة الصوفية:</strong> حلقات ذكر وإنشاد جماعي بالزوايا.</li>
+                    <li><strong>تدريجة العريس:</strong> زفة تقليدية ذات طابع ديني ومجتمعي.</li>
+                </ul>
+                <h3>الموروث الاجتماعي</h3>
+                <p>الأزياء التقليدية (البرنوس، الجرد، الفراشية) والمطبخ (العصيدة، الكسكسي، رشتة الكسكاس).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- المسارات السياحية المقترحة -->
+    <div class="section">
+        <h2 class="section-title">🗺️ المسارات السياحية المقترحة</h2>
+        <div class="grid-2">
+            <div>1. <strong>مسار العمارة الإسلامية</strong> – استكشاف الطرز الثلاثة.</div>
+            <div>2. <strong>مسار التراث الروحي</strong> – حضور حضرة صوفية، زيارة زاوية، تجربة كتّاب.</div>
+            <div>3. <strong>مسار الفنون والمألوف</strong> – أمسيات موشحات ومألوف بالمدينة القديمة.</div>
+            <div>4. <strong>مسار الأزياء والمطبخ</strong> – عروض أزياء وتجارب تذوق.</div>
+        </div>
+    </div>
+
+    <!-- الفعاليات المخطط لها 2028 (جدول مفصل) -->
+    <div class="section" id="events">
+        <h2 class="section-title">🎉 خطة الفعاليات لسنة التتويج 2028</h2>
+        <table class="event-table">
+            <thead><tr><th>الشهر</th><th>البرنامج/الفعالية</th><th>المكان</th><th>الأنشطة</th></tr></thead>
+            <tbody>
+                <tr><td>يناير</td><td>أسبوع العمارة الإسلامية</td><td>المدينة القديمة، مدرسة أنس بن مالك</td><td>ورش ومحاضرات وجولات معمارية</td></tr>
+                <tr><td>فبراير</td><td>ملتقى الموشحات والمألوف</td><td>مسار الفنون / قاعات ثقافية</td><td>عروض موسيقية، ورش تعليمية</td></tr>
+                <tr><td>مارس</td><td>مهرجان التراث الإسلامي</td><td>المدينة القديمة</td><td>حرف يدوية، عروض أزياء، أمسيات شعرية</td></tr>
+                <tr><td>ربيع الثاني</td><td>مهرجان الحضرة الصوفية الكبرى</td><td>الزوايا التاريخية</td><td>حلقات ذكر جماعية، إنشاد ديني</td></tr>
+                <tr><td>مايو</td><td>تدريجة العريس التقليدية</td><td>المدينة القديمة</td><td>مراسم زفاف تقليدية، موسيقى، أزياء</td></tr>
+                <tr><td>يونيو</td><td>برنامج المطبخ التقليدي</td><td>الأسواق والمطاعم التراثية</td><td>تجارب تذوق، ورش طبخ (عصيدة، كسكسي)</td></tr>
+                <tr><td>يوليو</td><td>مهرجان الخط والفنون الإسلامية</td><td>أحد الفنادق الكبرى</td><td>معارض خط عربي، نقوش، عمارة</td></tr>
+                <tr><td>سبتمبر</td><td>مؤتمر دولي حول السياحة الإسلامية</td><td>مركز المؤتمرات (كورنثيا)</td><td>حلقات نقاش، تبادل خبرات، سياحة الحلال</td></tr>
+                <tr><td>أكتوبر</td><td>جولات سياحية منظمة</td><td>المدينة القديمة والمواقع</td><td>مسارات العمارة والتراث الروحي والفنون</td></tr>
+                <tr><td>نوفمبر</td><td>فعاليات ختامية / معرض المطبخ الإسلامي</td><td>المدينة القديمة</td><td>مسابقات طبخ، تكريم المشاركين</td></tr>
+                <tr><td>ديسمبر</td><td>ختام العاصمة – عرض ضوئي وكبسولة زمنية</td><td>قلعة السرايا الحمراء</td><td>عرض ضوئي، إطلاق كبسولة زمنية، حفل تكريم</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- البنية التحتية والجاهزية -->
+    <div class="section">
+        <h2 class="section-title">🏨 البنية التحتية والجاهزية</h2>
+        <div class="stats-row">
+            <div class="stat-block"><span class="stat-number">185</span><br>فندق</div>
+            <div class="stat-block"><span class="stat-number">33</span><br>شقق فندقية</div>
+            <div class="stat-block"><span class="stat-number">28</span><br>مطعم تقليدي</div>
+            <div class="stat-block"><span class="stat-number">200+</span><br>رحلة أسبوعياً (مطار معيتيقة)</div>
+        </div>
+        <div class="grid-2">
+            <div>
+                <h3>مرافق الإيواء والمؤتمرات</h3>
+                <p>فنادق رائدة: كورنثيا، ريكسوس، المهاري، فور بوينتس شيراتون، برج الحياة، مجمع ذات العماد – قاعات مؤتمرات تسع حتى 1200 شخص.</p>
+                <h3>الأسواق الشعبية والحديثة</h3>
+                <p>سوق الترك، سوق المشير، سوق العطارة، إضافة إلى مراكز تسوق عصرية (فاميلي مول، المدينة مول).</p>
+            </div>
+            <div>
+                <h3>النوادي والفروسية والبحرية</h3>
+                <p>النادي البحري، نادي الفروسية (طريق المطار)، ملاعب الغولف والرياضات المائية.</p>
+                <h3>المكتبات والمعارض</h3>
+                <p>مكتبة قدري معروف، مكتبة المستقبل، مركز الشيخ علي الغرياني، دار الفنون بن عاشور، معرض طرابلس الدولي، المركز القومي للفنون والتراث.</p>
+            </div>
+        </div>
+        <p><strong>قدرة استضافة الوفود الرسمية:</strong> ممتازة – قاعات مجهزة، ترجمة فورية، سيارات فاخرة.</p>
+    </div>
+
+    <!-- المؤشرات الإحصائية -->
+    <div class="section" id="stats">
+        <h2 class="section-title">📊 المؤشرات الإحصائية</h2>
+        <div class="stats-row">
+            <div class="stat-block"><span class="stat-number">282k</span><br>سائح (نصف 2025)</div>
+            <div class="stat-block"><span class="stat-number">+60%</span><br>نمو سنوي</div>
+            <div class="stat-block"><span class="stat-number">100k+</span><br>زوار متاحف</div>
+            <div class="stat-block"><span class="stat-number">15</span><br>زوايا نشطة</div>
+            <div class="stat-block"><span class="stat-number">30+</span><br>كتاتيب مسجلة</div>
+        </div>
+        <p>أكثر من 10,000 سرير فندقي، طاقة استيعابية لقاعات المؤتمرات تفوق 2000 شخص، حركة جوية نشطة عبر مطار معيتيقة الدولي (3 ملايين مسافر سنوياً).</p>
+    </div>
+
+    <!-- الاستدامة والأثر المتوقع -->
+    <div class="grid-2">
+        <div class="card">
+            <h3>♻️ الاستدامة وحماية التراث</h3>
+            <p>مشروع ترميم المدينة القديمة بالتعاون مع اليونسكو (2025-2028)، إدارة النفايات الذكية، دعم الحرفيين، الطاقة النظيفة في الفنادق، والسياحة البيئية في ساقطات جنزور.</p>
+        </div>
+        <div class="card">
+            <h3>📈 الأثر المتوقع</h3>
+            <p><strong>اقتصادي:</strong> زيادة 40% في السياح، 5000+ فرصة عمل.<br>
+            <strong>ثقافي:</strong> إحياء الحرف والفنون المهددة.<br>
+            <strong>دولي:</strong> تعزيز صورة ليبيا كوجهة سياحة إسلامية آمنة، جذب السياحة المغاربية والعربية.</p>
+        </div>
+    </div>
+
+    <!-- الخاتمة والاعتماد -->
+    <div class="section">
+        <h2 class="section-title">✨ الخلاصة</h2>
+        <p>طرابلس ليست مدينة على البحر فقط، ولا بوابة إلى الصحراء فحسب؛ بل جسر حضاري بين المتوسط والعمق الإفريقي، حيث تتجاور القباب العثمانية مع الأقواس الأندلسية، وتنبض الأزقة بأصوات المألوف والحضرة الصوفية، وتجري تدريجة العريس في قلب المدينة القديمة.</p>
+        <p><strong>طرابلس تمتلك كافة المقومات لتكون عاصمة السياحة الإسلامية 2028، وتتعهد ليبيا بإنجاح هذا الاختيار ببرنامج شامل يليق بالحدث.</strong></p>
+        <div class="signature">
+            <p style="font-size: 1.2rem;">✍️ <strong>ن. نصرالدين ميلاد الفزاني</strong></p>
+            <p>وزير السياحة والصناعات التقليدية – دولة ليبيا<br>حكومة الوحدة الوطنية<br>التاريخ: 2026</p>
+        </div>
+    </div>
+
+    <!-- رابط مستودع github للصور والمزيد -->
+    <div style="text-align: center; margin: 1rem 0 2rem 0;">
+        <a href="https://github.com/tidclibya/tripoli-islamic" target="_blank" class="btn-gh">📂 مستودع الصور والوثائق على GitHub</a>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2026 وزارة السياحة والصناعات التقليدية – ليبيا | ملف ترشيح رسمي لعاصمة السياحة الإسلامية 2028</p>
+        <p>طرابلس: عراقة الماضي وروح الحاضر – مدينة المساجد، الزوايا، والبحر المتوسط.</p>
+    </div>
+</footer>
+
+<!-- نوتة: الصور توضع في نفس المجلد بأسماء مثل cornia.png, event1.png, folklore.png, handcraft1.png ... إلخ، مع إمكانية استبدالها بصور حقيقية من مستودع github -->
+</body>
+</html>
